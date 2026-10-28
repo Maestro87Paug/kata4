@@ -1,0 +1,10 @@
+target/
+out/
+build/
+bin/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
