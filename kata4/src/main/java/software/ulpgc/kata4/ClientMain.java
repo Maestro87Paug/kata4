@@ -1,3 +1,4 @@
+
 package software.ulpgc.kata4;
 
 import software.ulpgc.kata4.adapters.HttpFibonacciService;
@@ -15,15 +16,16 @@ public class ClientMain {
             String url;
             if (args.length > 0) url = args[0];
             else url = BASE_URL;
-
             int n;
             if (args.length > 1) n = Integer.parseInt(args[1]);
-            else n = 10;
+            else n = 5;
 
             FibonacciService service = new HttpFibonacciService(url);
             FibonacciSeries series = service.getSeries(n);
+
             System.out.println("Serie de Fibonacci (" + n + " términos):");
             System.out.println(Arrays.toString(series.getValues()));
+
         } catch (IOException e) {
             System.out.println("No se puede conectar con el servicio");
         } catch (InterruptedException e) {
