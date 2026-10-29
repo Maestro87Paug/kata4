@@ -23,7 +23,7 @@ public class ClientMain {
             FibonacciService service = new HttpFibonacciService(url);
             FibonacciSeries series = service.getSeries(n);
             System.out.println("Serie de Fibonacci (" + n + " términos):");
-            System.out.println(Arrays.toString(series.getValues()));
+            System.out.println("Total: " + series.getValues().length + " términos");
         } catch (IOException e) {
             System.out.println("No se puede conectar con el servicio");
         } catch (InterruptedException e) {
